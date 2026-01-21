@@ -174,10 +174,11 @@ class shpProc:
         self.outputname = "TAZInertia.csv"
 
     
-    def __init__(self, shpname, attrs_name, threshold_name, outputname="TAZInertia.csv"):
+    def __init__(self, shpname, attrs_name, threshold_name, outputname="TAZInertia.csv", write_output=False):
         #print ("initializing instance")
         self.shpname = shpname
         self.outputname = outputname
+        self.write_output = write_output
         self.polygons = {}
         polyDic, similarity,threshold = self.readSHP(shpname, attrs_name, threshold_name)
         self.initialize(polyDic, similarity, threshold)
@@ -198,8 +199,10 @@ class shpProc:
         self.size = len(self.polygons)
         time2 = datetime.now()
         #print ("Time Elapse: ", str(time2-time1))
-        global filePath
-        self.writeToFile(filePath + self.outputname)
+        if self.write_output:
+            global filePath
+            os.makedirs(filePath, exist_ok=True)
+            self.writeToFile(filePath + self.outputname)
 
 
 

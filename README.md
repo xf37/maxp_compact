@@ -112,17 +112,30 @@ A lower shape index indicates a more compact (circular) region.
 
 If you use this code in your research, please cite:
 
+```bibtex
+@article{feng2022maxp,
+  title={The max-p-compact-regions problem},
+  author={Feng, Xin and Rey, Sergio and Wei, Ran},
+  journal={Transactions in GIS},
+  volume={26},
+  number={2},
+  pages={717--734},
+  year={2022},
+  publisher={Wiley}
+}
 ```
-Feng, X. (2020). Max-p Regionalization with Compactness Constraints.
-```
+
+Feng, X., Rey, S., & Wei, R. (2022). The max‐p‐compact‐regions problem. *Transactions in GIS*, 26(2), 717-734.
 
 ## License
 
 MIT License - see [LICENSE](LICENSE) for details.
 
-## Author
+## Authors
 
-- Xin Feng (@fengxin)
+- Xin Feng
+- Sergio Rey
+- Ran Wei
 
 ## Contributing
 
