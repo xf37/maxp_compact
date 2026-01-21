@@ -42,7 +42,7 @@ def main():
     flag_ea = 1        # Enable compactness in enclave assignment
     randomGrow = 2
     randomAssign = 2
-    threshold = 5000   # Minimum threshold for each region
+    threshold = 30000  # Higher threshold = fewer regions (easier to verify visually)
     ITERCONSTRUCT = 50 # Reduced for faster testing
 
     threshold_name = 'PCGDP1940'
